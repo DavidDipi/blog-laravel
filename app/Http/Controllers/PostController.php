@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        return "Here is a list of all blog posts";
+        return view('posts.index');
     }
 
     public function create(){
-        return "This is the page to create a new blog post";
+        return view('posts.create');   
     }
 
     public function show($id){
-        return "This is the page to show a blog post with id of $id";
+        return view('posts.show', compact('id'));
     }
 }
