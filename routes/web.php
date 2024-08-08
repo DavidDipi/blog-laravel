@@ -14,18 +14,18 @@ Route::get('/posts/create', [PostController::class, 'create']);
 Route::get('/posts/{id}', [PostController::class,'show']);
 
 Route::get('prueba', function () {
-    /*
-    // Create a new post
-    $post = new Post();
     
-    $post->title = 'Título de prueba 2';
-    $post->content = 'Contenido de prueba 2';
-    $post->category = 'Categoría de prueba 2';
+    // Create a new post
+    // $post = new Post();
+    
+    // $post->title = 'Título de prueba 3';
+    // $post->content = 'Contenido de prueba 3';
+    // $post->category = 'Categoría de prueba 3';
 
-    $post->save();
+    // $post->save();
 
-    return $post;
-    */
+    // return $post;
+    
     
 
     /* Update a post */
