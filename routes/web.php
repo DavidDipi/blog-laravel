@@ -15,45 +15,16 @@ Route::get('/posts/{id}', [PostController::class,'show']);
 
 Route::get('prueba', function () {
     
-    // Create a new post
     // $post = new Post();
-    
-    // $post->title = 'Título de prueba 3';
-    // $post->content = 'Contenido de prueba 3';
-    // $post->category = 'Categoría de prueba 3';
+
+    // $post->title = 'Titulo de prueba 1';
+    // $post->content = 'Contenido de prueba 1';
+    // $post->category = 'Categoria de prueba 1';
+    // $post->published_at = now();
 
     // $post->save();
 
-    // return $post;
-    
-    
-
-    /* Update a post */
-
-    /* $post = Post::find(1);
-    $post = Post::where('title', 'Título de prueba 1')
-        ->first();
-
-    $post->category = 'Categoria de prueba 1 (actualizado)';
-    $post->save();
-
-    return $post;
-    */
-
-    /* List of all posts */
-    
-    /*$posts = Post::orderBy('id', 'desc')
-        ->get();    
-        return $posts;
-    */
-
-    /* Delete a post */
-
-    /*$post = Post::find(1);
-    $post->delete();
-
-    return 'Eliminado correctamente';
-     */
-    
+    $post = Post::find(1);
+    dd($post->is_active) ;
 
 });
