@@ -10,7 +10,7 @@ class PostController extends Controller
     public function index(){
         $post = Post::orderBy('id', 'desc')
             ->where('is_active', true)
-            ->get();
+            ->paginate();
         return view('posts.index', [
             'posts' => $post
         ]);
