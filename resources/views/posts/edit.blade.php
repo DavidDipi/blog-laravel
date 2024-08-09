@@ -1,6 +1,6 @@
 <x-app-layout>
     <h1>Edit post</h1>
-    <form action="/posts/{{$post->id}}" method="POST" class="d-flex flex-column p-2">
+    <form action="{{route('posts.update', $post)}}" method="POST" class="d-flex flex-column p-2">
         @csrf
         @method('PUT')
         <label>
