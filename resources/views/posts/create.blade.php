@@ -7,6 +7,10 @@
             <input type="text" name="title">
         </label>
         <label>
+            Slug:
+            <input type="text" name="slug">
+        </label>
+        <label>
             Category:
             <input type="text" name="category">
         </label>
