@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel | Posts</title>
-</head>
-<body>
-    <h1>This is the page to create a new blog post</h1>
-</body>
-</html>
+<x-app-layout>
+    <h1>New post</h1>
+    <form action="/posts" method="POST" class="d-flex flex-column p-2">
+        @csrf
+        <label>
+            Title:
+            <input type="text" name="title">
+        </label>
+        <label>
+            Category:
+            <input type="text" name="category">
+        </label>
+        <label>
+            Content:
+            <textarea name="content"></textarea>
+        </label>
+        <button type="submit">Create post</button>
+    </form>
+</x-app-layout>

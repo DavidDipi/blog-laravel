@@ -1,19 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel | Posts</title>
-</head>
-<body>
-    <h1>This is the page to show {{ $id }} </h1>
+<x-app-layout>
 
+    
+    <div class="container">
+        <a href="/posts" class="mt-5">Return to post</a>
+        <h1 class="m-5">Title: {{ $post->title }}</h1>
+        <p class="mx-4">
+            <b>Category: </b> {{ $post->category }}
+        </p>
 
-    @if ( false )
-        <h2>It's true!</h2>
-    @endif 
+        <p>
+            {{ $post->content }}
+        </p>
 
+        <a href="/posts/{{ $post->id }}/edit">Edit post</a>
 
-</body>
-</html>
+        <form action="/posts/{{ $post->id }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit">
+                Delete post
+            </button>
+        </form>
+    </div>
+
+</x-app-layout>
