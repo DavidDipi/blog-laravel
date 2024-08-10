@@ -12,6 +12,13 @@ class Post extends Model
 
     // protected $table = 'posts';
 
+    protected $fillable = [
+        'title',
+        'slug',
+        'content',
+        'category',
+    ];
+
     protected function casts(): array {
         return [
             'published_at' => 'datetime:d-m-Y',
