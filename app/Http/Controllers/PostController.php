@@ -21,14 +21,15 @@ class PostController extends Controller
     }
 
     public function store(Request $request){
+
+        $request->validate([
+            'title' => 'required',
+            'slug' => 'required',
+            'category' => 'required',
+            'content' => 'required',
+        ]);
+        
         Post::create($request->all());
-        // $post = new Post();
-        // $post->title = $request->title;
-        // $post->slug = $request->slug;
-        // $post->content = $request->content;
-        // $post->category = $request->category;
-        // $post->published_at = now();
-        // $post->save();
 
         return redirect()->route('posts.index');
     }
